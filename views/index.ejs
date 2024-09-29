@@ -18,13 +18,15 @@
             </label>
             <button type="submit">Pesquisar</button>
         </form>
-        <% if(locals.weather){ %>
-            <h2><%= weather%></h2>
-            <img src="http://openweathermap.org/img/wn/<%= iconCode %>@2x.png" alt="Ícone do clima">
-        <% } %>
-        <% if(locals.error){ %>
-           <h2><%= error %></h2> 
-        <% } %>
+        <div class="response">
+            <% if(locals.weather){ %>
+                <h2><%= weather%></h2>
+                <img src="http://openweathermap.org/img/wn/<%= iconCode %>@2x.png" alt="Ícone do clima">
+            <% } %>
+            <% if(locals.error){ %>
+               <h2><%= error %></h2> 
+            <% } %>
+        </div>
     </main>
 </body>
 </html>
