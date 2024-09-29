@@ -30,8 +30,10 @@ app.post("/submit", async(req, res) => {
             iconCode: weatherIcon
         });
     } catch (error) {
-        console.log(error.response ? error.response.message : error.message);
-        res.status(500).send("Erro ao buscar a previsão do tempo");
+        console.log(error.response ? error.response.data.message : error.message);
+        res.render("index.ejs", {
+            error: "Erro ao obter dados meteorológicos"
+        });
     }
 });
 
