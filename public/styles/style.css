@@ -1,5 +1,19 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 body {
     background: linear-gradient(45deg, #007f7f 0%, #001f3f 75%, #ff7f00 100%);
+    background-size: 300% 300%; /* Aumenta o tamanho do background para dar mais espaço ao movimento */
+    animation: gradientAnimation 15s ease infinite; /* Define a animação */
     height: 100vh; /* Para cobrir toda a altura da página */
     margin: 0; /* Remove a margem padrão */
     font-family: "Roboto", sans-serif;
